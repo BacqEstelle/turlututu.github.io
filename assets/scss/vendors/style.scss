@@ -1,0 +1,252 @@
+// importations
+@import "_mixins.scss";
+@import "_mobile.scss";
+@import "_print.scss";
+@import "_variables.scss";
+
+
+// Debut des variables
+
+$color-clair: white;
+$color-color: #1e93cc;
+$color-fonce: #333333;
+$color-text-clair: white;
+$color-text-fonce: black;
+$margin-global: 5%;
+$padding-global: 0px 15px 0px 15px;
+
+// Paramètre global
+body{
+    background-color: #333333;
+    margin-left: 2px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    bottom: 0;
+    font-family: 'Raleway', sans-serif;
+    a{
+    p{
+        color: $color-clair;
+    }    
+    }
+}    
+
+// Bouton floattant
+
+.notification{
+    
+    padding: $padding-global;
+    position: fixed;
+    display: inline-block;
+    right: 0;
+    bottom: 0;
+}
+
+// Header
+
+.menu {
+    
+    background-color: $color-fonce;
+    display: block;
+    margin: 0px;
+    top: 0;
+    padding: 0px 10px 0px 50px;
+    height: 50px; 
+}
+
+    .main-nav {
+
+        display: -webkit-flex;
+        list-style-type:none;
+        bottom: 0;
+
+        li:last-child{
+            margin-left: auto;
+            text-decoration: none;
+            padding-right: 50px;
+
+        }
+        a{
+            display: block;
+            margin: 10px;
+            color: $color-clair;
+            text-decoration: none;
+            bottom: 0;
+        }
+    }
+header{
+    padding: 10px 20px 10px 20px;
+    background-color: $color-color;
+    color: $color-clair;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+
+
+    .en-tete-logo{
+        width: (99/2)*2% ;
+        grid-column: 1;
+        text-align: left;
+        padding-left: 10%;
+    }
+    .en-tete-texte{
+        display: grid;
+        grid-column: 2;
+        text-align: center;
+
+    }
+    .logo-entete{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        grid-column: 1;
+
+    }
+
+}
+.bouton{
+
+    a{
+        padding: 20px 30px;
+        background-color: orange;
+        color: $color-clair;
+        @include border-radius(11px);
+        border: 2px solid $color-clair;
+        
+    }
+}
+// Sub-entete
+.sub-entete{
+    display: block;
+    padding: 1% 1% 1% 1%;
+    height: auto;
+    background-color: $color-clair;
+    color: $color-text-fonce;
+    text-align: center;
+
+}
+.corp-1{
+    display: grid;
+    grid-gap: 5%;
+    padding: 3% 10% 3% 10%;
+    background-color: $color-color;
+    color: $color-text-clair;
+    .colonne1{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .colonne2{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .colonne3{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .colonne4{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+}
+.corp-2{
+        padding: 1%;
+        background-color: $color-clair;
+        color: $color-text-fonce;
+        text-align: center;
+}
+.corp-3{
+        padding: 5% 20% 5% 20%;
+        background-color: #eee;
+        text-align: center;
+        color: $color-text-fonce;
+}
+.corp-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5% 35% 5% 35%;
+    background-color: $color-clair;
+    
+
+    .bouton-2{
+        margin: 0px 5px 0px 5px;
+        padding: 20px 20px;
+        background: #165882;
+        text-align: center;
+        grid-column: 1;
+        @include border-radius(11px);
+        a{
+            color: $color-text-clair;
+            text-decoration: none;
+        }
+    }
+    .bouton-3{
+        color: $color-text-clair;
+        text-decoration: none;
+        margin: 0px 5px 0px 5px;
+        padding: 20px 20px;
+        background: #165882;
+        text-align: center;
+        grid-column: 2;
+        @include border-radius(11px);
+        a{
+            color: $color-text-clair;
+            text-decoration: none;
+        }
+    }
+    .bouton-4{
+        color: $color-text-clair;
+        text-decoration: none;
+        margin: 0px 5px 0px 5px;
+        padding: 20px 20px;
+        background: orange;
+        text-align: center;
+        grid-column: 3;
+        @include border-radius(11px);
+        a{
+            color: $color-text-clair;
+            text-decoration: none;
+        }
+    }
+
+}
+
+//Footer
+
+footer{
+    display: grid;
+.menu-pied{
+    grid-template-columns: 100px 100px 100px 150px 150px;
+    grid-row: 1;
+    text-align: left;
+    padding: 15px 10px 15px 10px;
+    vertical-align: middle;
+    background-color: $color-fonce;
+    margin: 0px;
+
+
+
+    a{
+    color: $color-text-clair;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    border-right: 1px solid $color-text-clair;
+    padding: 0px 10px 0px 10px;
+    }
+    a:last-child{
+        border-right: none;
+        
+        }
+
+            
+}
+    p{
+    color: $color-text-clair;
+     text-align: right;
+     grid-row:1;
+     vertical-align: middle;
+     padding-right: 15px
+    }
+}
